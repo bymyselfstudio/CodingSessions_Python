@@ -51,7 +51,6 @@ def main() -> None:
     complete_collection = get_full_collection(upper, lower, number, 
                             special, bracket, minus, underline)
     length = 32
-    password = ""
     password = "".join(random.sample(complete_collection, length))
     print(password)
 
