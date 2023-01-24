@@ -4,20 +4,17 @@ def getQuadDimensions() -> list[str]:
     dimensions = userInput.split(',')
     return dimensions
 
-
 def convertToFloat(dimensions: list[str]) -> list[float]:
     dimensionsAsFloat = []
     for dimension in dimensions:
         dimensionsAsFloat.append(float(dimension))
     return dimensionsAsFloat
 
-
 def getVolume(convertedDimensions: list[float]) -> float:
     volume = 1
     for dimension in range(len(convertedDimensions)):
         volume *= convertedDimensions[dimension]
     return volume
-
 
 def getSurface(convertedDimensions: list[float]) -> float:
     surface, ground, side, front = 0, 0, 0, 0
@@ -30,7 +27,6 @@ def getSurface(convertedDimensions: list[float]) -> float:
     surface = (ground + side + front) * 2
     return surface
 
-
 def getSpaceDiagonal(convertedDimensions: list[float]) -> float:
     spaceDiagonal = 0
     length = convertedDimensions[0]
@@ -38,7 +34,6 @@ def getSpaceDiagonal(convertedDimensions: list[float]) -> float:
     height = convertedDimensions[2]
     spaceDiagonal = (length ** 2 + width ** 2 + height ** 2) ** 0.5
     return spaceDiagonal
-
 
 def main() -> None:
     dimensions = getQuadDimensions()
@@ -51,7 +46,6 @@ def main() -> None:
     print(f"Volume: {volume}")
     print(f"Surface: {surface}")
     print(f"Space diagonal: {spaceDiagonal}")
-
 
 if __name__ == "__main__":
     main()
