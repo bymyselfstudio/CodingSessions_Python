@@ -13,8 +13,7 @@ def get_special_chars() -> str:
     return "!§$%&/=?^\\'*+@~;."
     
 def get_brackets() -> str:
-    brackets = "()}{<>[]"
-    return brackets
+    return "()}{<>[]"
 
 def get_minus() -> str:
     return "-"
